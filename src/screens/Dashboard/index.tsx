@@ -1,43 +1,35 @@
 import React from "react";
+
 import { HighlightCard } from "../../components/HIghlightCard";
-import {
-  Container,
-  Header,
-  HighlightCards,
-  Icon,
-  Photo,
-  User,
-  UserGreeting,
-  UserInfo,
-  UserName,
-  UserWrapper,
-} from "./styles";
+import Header from "../../components/Header";
+import { Container, HighlightCards } from "./styles";
+import Transaction from "../../components/Transaction";
 
 export function Dashboard() {
   return (
     <Container>
-      <Header>
-        <UserWrapper>
-          <UserInfo>
-            <Photo
-              source={{
-                uri: "https://avatars.githubusercontent.com/u/69832627?v=4",
-              }}
-            />
-            <User>
-              <UserGreeting>Olá,</UserGreeting>
-              <UserName>Rodrigo</UserName>
-            </User>
-          </UserInfo>
-          <Icon name="power" />
-        </UserWrapper>
-      </Header>
+      <Header />
       <HighlightCards>
-        <HighlightCard />
-        <HighlightCard />
-        <HighlightCard />
-        <HighlightCard />
+        <HighlightCard
+          type="down"
+          amount="10"
+          lastTransaction="R$ 10.00"
+          title="titlo"
+        />
+        <HighlightCard
+          type="up"
+          amount="10"
+          lastTransaction="R$ 10.00"
+          title="titlo"
+        />
+        <HighlightCard
+          type="total"
+          amount="10"
+          lastTransaction="R$ 10.00"
+          title="titlo"
+        />
       </HighlightCards>
+      <Transaction />
     </Container>
   );
 }
