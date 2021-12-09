@@ -4,6 +4,7 @@ import { HighlightCard } from "../../components/HIghlightCard";
 import Header from "../../components/Header";
 import { Container, HighlightCards } from "./styles";
 import Transaction from "../../components/Transaction";
+import TransactionCard from "../../components/TransactionCard";
 
 export function Dashboard() {
   return (
@@ -29,7 +30,9 @@ export function Dashboard() {
           title="titlo"
         />
       </HighlightCards>
-      <Transaction />
+      <Transaction>
+        <TransactionCard />
+      </Transaction>
     </Container>
   );
 }
